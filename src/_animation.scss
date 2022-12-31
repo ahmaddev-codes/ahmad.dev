@@ -1,0 +1,129 @@
+@import './variables.scss';
+
+/* ===== The underline effect in link ===== */
+@keyframes underline {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* ===== The greet animation ===== */
+@keyframes greet {
+  from {
+    transform: rotate(0);
+    opacity: 0;
+    margin-left: -5rem;
+  }
+  50% {
+    transform: rotate(-12deg);
+    opacity: 1;
+    margin-left: -3rem;
+  }
+  to {
+    transform: rotate(0);
+    opacity: 0;
+    margin-left: -5rem;
+  }
+}
+
+/*  ===== fill animation =====  */
+@keyframes fill {
+  50% {
+    background: transparent;
+    color: $white;
+  }
+  100% {
+    background: $white;
+    color: $black;
+  }
+}
+
+/*  ===== button click & bubbles animation =====  */
+@keyframes click {
+  50% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes topBubbles {
+  50% {
+    background-position:
+      0% 80%,
+      0% 20%,
+      10% 40%,
+      20% 0%,
+      30% 30%,
+      22% 50%,
+      65% 20%,
+      90% 30%;
+  }
+  100% {
+    background-position:
+      0% 70%,
+      0% 10%,
+      10% 30%,
+      20% -10%,
+      30% 20%,
+      22% 40%,
+      65% 10%,
+      90% 20%;
+    background-size:
+      0% 0%,
+      0% 0%,
+      0% 0%,
+      0% 0%,
+      0% 0%,
+      0% 0%,
+      0% 0%,
+      0% 0%;
+  }
+}
+
+@keyframes bottomBubbles {
+  50% {
+    background-position:
+      0% 80%,
+      20% 80%,
+      45% 60%,
+      60% 100%,
+      75% 70%,
+      95% 60%,
+      105% 0%;
+  }
+  100% {
+    background-position:
+      0% 90%,
+      20% 90%,
+      45% 70%,
+      60% 110%,
+      75% 80%,
+      95% 70%,
+      110% 10%;
+    background-size:
+      0% 0%,
+      0% 0%,
+      0% 0%,
+      0% 0%,
+      0% 0%,
+      0% 0%,
+      0% 0%;
+  }
+}
+
+/* ====== float animation ===== */
+@keyframes float {
+  /* 10% {
+    background-position:
+    20% 60%,
+    50% 25%,
+    80% 80%,
+    70% 70%,
+    60% 50%;
+  } */
+}

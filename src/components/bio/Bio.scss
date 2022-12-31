@@ -1,0 +1,156 @@
+@import "../../variables";
+@import "../../mixins";
+
+.bio {
+  display: grid;
+  grid-template-columns: 1fr;
+  background: $white;
+  color: $black;
+  gap: 2rem;
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    &__details {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.25rem;
+
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $white;
+        background: $black;
+        gap: 0.5rem;
+        padding: 0.625rem;
+        width: auto;
+        height: auto;
+        border-radius: 3.125rem;
+        font-size: 0.875rem;
+
+        &:active {
+          animation: click 300ms ease forwards;
+        }
+
+        &:hover {
+          opacity: 0.6;
+        }
+
+        img {
+          width: 10%;
+          height: 10%;
+        }
+      }
+
+      &__image {
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        background: $grey;
+        background-image: url("../../images/bitmoji-3.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    }
+
+    &__perks {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      padding: 0;
+
+      .perks__details {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        background: $grey;
+        padding: 0.4rem 0.6rem;
+        border-radius: 0.625rem;
+
+        div:first-child {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 0.275rem;
+          background: $light_grey;
+          border-radius: 2rem;
+
+          img {
+            width: 1.25rem;
+            height: 1.25rem;
+          }
+        }
+
+        div:last-child {
+          width: auto;
+          height: auto;
+          font-size: 0.475rem;
+          padding: 0.275rem;
+          background: $light_grey;
+          border-radius: 2rem;
+        }
+      }
+    }
+
+    &__text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0 4rem;
+
+      h1 {
+        font-size: 1.25rem;
+      }
+
+      p {
+        font-size: 0.875rem;
+        font-weight: 600;
+        margin: 0;
+      }
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5%;
+
+    h1 {
+      font-size: 1.25rem;
+      margin-bottom: -0.5rem;
+    }
+
+    ul {
+
+      li {
+        list-style-type: disc;
+        font-size: 0.875rem;
+        font-weight: 500;
+        line-height: 1.25rem;
+
+        &:not(last-child) {
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+.fade {
+  color: $dark_grey;
+}
+
+.small {
+  font-size: 0.675rem;
+}

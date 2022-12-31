@@ -1,0 +1,75 @@
+@import '../../variables';
+@import '../../mixins';
+@import '../../animation';
+
+.nav {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: $black;
+  padding: 2rem;
+  width: 100%;
+  z-index: 10;
+
+  @include breakpoint-up(large) {
+    position: static;
+    justify-content: center;
+    gap: 4rem;
+    padding: 3rem 1.25rem;
+  }
+
+  &__hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include breakpoint-up(large) {
+      display: none;
+    }
+
+    > span {
+      width: 2rem;
+      height: 0.185rem;
+      border-radius: 1.25rem;
+      background-color: $white;
+
+      &:first-child {
+        margin-bottom: 0.4rem;
+      }
+
+      &:last-child {
+        margin-top: 0.4rem;
+      }
+    }
+  }
+
+  &__link {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+
+    @include breakpoint-down(medium) {
+      display: none;
+    }
+
+    a {
+      position: relative;
+      padding-bottom: 0.675rem;
+      color: $white;
+
+      &:hover::after {
+        position: absolute;
+        content: '';
+        left: 0;
+        right: 0;
+        bottom: -0.375rem;
+        width: 0;
+        height: 0.125rem;
+        background: $white;
+        border-radius: 0.5rem;
+        animation: underline 1s ease forwards;
+      }
+    }
+  }
+}
