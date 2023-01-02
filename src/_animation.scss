@@ -139,3 +139,16 @@
       91% 70%;
   }
 }
+
+/* ====== footer aimation ====== */
+@keyframes round {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes jump {
+  50% {
+    margin-top: 2%;
+  }
+}
