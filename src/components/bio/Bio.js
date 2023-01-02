@@ -10,10 +10,9 @@ import { MdOutlineQrCode2 } from "react-icons/md";
 
 /* import QrCode Modal */
 import QrCode from "../qrCode/QrCode";
-import "../qrCode/QrCode.scss";
 
 const Bio = () => {
-  const [qrCode, setQrCode] = useState(true);
+  const [qrCode, setQrCode] = useState(false);
 
   return (
     <section id="bio" className="bio">
