@@ -1,18 +1,20 @@
-import React from "react";
+import { React, useState } from "react";
 import "../bio/Bio.scss";
 import github from "../../icons/github.png";
 import excellencePerk from "../../icons/excellence.png";
 import speedPerk from "../../icons/speed.png";
 import qualityPerk from "../../icons/quality.png";
 import teamPlayPerk from "../../icons/team.png";
+import resumeFile from "../../files/Resume.pdf";
+import { MdOutlineQrCode2 } from "react-icons/md";
 
 const Bio = () => {
+  const [QrCodeView, setQrCodeView] = useState("");
   return (
-    <section className="bio">
+    <section id="bio" className="bio">
       <article className="bio__header">
         <div className="bio__header__details">
           <div className="bio__header__details__image"></div>
-
           <a
             href="https://github.com/iAhm-codes"
             rel="noreferrer"
@@ -72,35 +74,50 @@ const Bio = () => {
 
         <ul>
           <li>
-            <span className="fade">Tijani Ahmad</span> is a Front End Web Developer with 1+ years
-            of experience in developing for the Web using the core front-end
-            technologies - HTML, CSS and JavaScript.
+            <span className="fade">Tijani Ahmad</span> is a Front End Web
+            Developer with 1+ years of experience in developing for the Web
+            using the core front-end technologies - HTML, CSS and JavaScript.
           </li>
           <li>
             He has knowledge in using the libraries and frameworks of the above
-            mentioned  front-end technologies, which includes but not limited to
-            &nbsp;<span className="fade">Tailwind CSS</span> and <span className="fade">React.Js</span>.
+            mentioned front-end technologies, which includes but not limited to
+            {" "}<span className="fade">Tailwind CSS</span> and{" "}
+            <span className="fade">React.Js</span>.
           </li>
           <li>
-            Collaborating with team members using Version Control Systems (VCS) like
-            &nbsp;<span className="fade">Git</span> and <span className="fade">GitHub</span>, and writing <span className="fade">clean
-            code</span> for readability and code debugging.
+            Collaborating with team members using Version Control Systems (VCS)
+            like {" "}<span className="fade">Git</span> and{" "}
+            <span className="fade">GitHub</span>, and writing{" "}
+            <span className="fade">clean code</span> for readability and code
+            debugging.
           </li>
           <li>
-            Tijani Ahmad is also proficient in using industry standard design principles
-            in creating user centered UI with 2+ years of experience in &nbsp;<span className="fade">User Interface</span>
-            and <span className="fade">experience design</span>.
+            Tijani Ahmad is also proficient in using industry standard design
+            principles in creating user centered UI with 2+ years of experience
+            in {" "}<span className="fade">User Interface</span>
+            {" "}and <span className="fade">experience design</span>.
           </li>
           <li>
-            Designing for <span className="fade">Accessibility</span> and <span className="fade">Inclusivity</span> to ensure all users’ needs are
-            considered during the design process and keeping it in mind through the
-            development and production stage.
+            Designing for <span className="fade">Accessibility</span> and{" "}
+            <span className="fade">Inclusivity</span> to ensure all users’ needs
+            are considered during the design process and keeping it in mind
+            through the development and production stage.
           </li>
         </ul>
       </article>
 
       <article className="bio__file">
+        <p>Download my CV here</p>
 
+        <div className="bio__file__details">
+          <a href={resumeFile} download>
+            CV (PDF)
+          </a>
+          <a href={QrCodeView} onClick={() => setQrCodeView("#contact")}>
+            SCAN CODE
+            <MdOutlineQrCode2 />
+          </a>
+        </div>
       </article>
     </section>
   );

@@ -9,11 +9,11 @@
   background: $white;
   color: $black;
   text-align: center;
-  padding: 3rem 3rem 5rem 3rem;
+  padding: 3rem 0 5rem;
   gap: 3rem;
 
   @include breakpoint-up(large) {
-    padding: 4rem 5rem 6rem 5rem;
+    padding: 4rem 0 6rem;
     gap: 5rem;
   }
 
@@ -24,7 +24,7 @@
       letter-spacing: -0.32px;
 
       @include breakpoint-up(large) {
-        font-size: 2.25rem;
+        font-size: 2rem;
         line-height: 3rem;
       }
     }
@@ -37,14 +37,15 @@
       margin-top: -0.5rem;
 
       @include breakpoint-up(large) {
-        font-size: 1.875rem;
+        font-size: 1.475rem;
       }
     }
   }
 
   .slider__container {
     display: flex;
-    border-radius: 0.8rem;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 100%;
 
@@ -68,7 +69,6 @@
       height: 100%;
       border-radius: 0.8rem;
       overflow: hidden;
-      transition: all 300ms ease;
 
       @include breakpoint-up(large) {
         gap: 5rem;
@@ -182,15 +182,15 @@
 }
 
 .swiper-container {
-  width: 480px;
+  width: 415px;
 
-  @media screen and (min-width: 640px) {
-    width: 820px;
+  @media screen and (min-width: 768px) {
+    width: 730px;
   }
   @media screen and (min-width: 1024px) {
-    width: 1280px;
+    width: 1000px;
   }
-  @media screen and (min-width: 1400px) {
+  @media screen and (min-width: 1440px) {
     width: 1400px;
   }
 }
