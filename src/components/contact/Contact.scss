@@ -77,6 +77,10 @@
       gap: 1rem;
       width: 100%;
 
+      @include breakpoint-up(medium) {
+        width: 80%;
+      }
+
       input {
         width: 100%;
         height: 3rem;
@@ -85,7 +89,7 @@
         background-color: $black;
         background-image: url("../../icons/Profile.svg");
         background-repeat: no-repeat;
-        background-size: 8%;
+        background-size: 10%;
         background-position: 3%;
         border: 1px solid $dark_white;
         border-radius: 50px;
@@ -129,12 +133,14 @@
         width: 100%;
         height: 3rem;
         font-size: 1rem;
+        font-weight: 500;
         color: $dark_grey;
         border: 1px solid $dark_white;
         border-radius: 50px;
         padding: 1rem 1rem 1rem;
         font-family: "poppins", sans serif;
         background: transparent;
+        transition: all 300ms ease;
         outline: none;
         cursor: pointer;
 

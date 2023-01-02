@@ -8,8 +8,12 @@ import teamPlayPerk from "../../icons/team.png";
 import resumeFile from "../../files/Resume.pdf";
 import { MdOutlineQrCode2 } from "react-icons/md";
 
+/* import QrCode Modal */
+import QrCode from "../qrCode/QrCode";
+
 const Bio = () => {
-  const [QrCodeView, setQrCodeView] = useState("");
+  const [qrCode, setQrCode] = useState(false);
+
   return (
     <section id="bio" className="bio">
       <article className="bio__header">
@@ -80,13 +84,13 @@ const Bio = () => {
           </li>
           <li>
             He has knowledge in using the libraries and frameworks of the above
-            mentioned front-end technologies, which includes but not limited to
-            {" "}<span className="fade">Tailwind CSS</span> and{" "}
+            mentioned front-end technologies, which includes but not limited to{" "}
+            <span className="fade">Tailwind CSS</span> and{" "}
             <span className="fade">React.Js</span>.
           </li>
           <li>
             Collaborating with team members using Version Control Systems (VCS)
-            like {" "}<span className="fade">Git</span> and{" "}
+            like <span className="fade">Git</span> and{" "}
             <span className="fade">GitHub</span>, and writing{" "}
             <span className="fade">clean code</span> for readability and code
             debugging.
@@ -94,8 +98,8 @@ const Bio = () => {
           <li>
             Tijani Ahmad is also proficient in using industry standard design
             principles in creating user centered UI with 2+ years of experience
-            in {" "}<span className="fade">User Interface</span>
-            {" "}and <span className="fade">experience design</span>.
+            in <span className="fade">User Interface</span> and{" "}
+            <span className="fade">experience design</span>.
           </li>
           <li>
             Designing for <span className="fade">Accessibility</span> and{" "}
@@ -110,15 +114,17 @@ const Bio = () => {
         <p>Download my CV here</p>
 
         <div className="bio__file__details">
-          <a href={resumeFile} download>
+          <a href={resumeFile} rel="noreferrer" download>
             CV (PDF)
           </a>
-          <a href={QrCodeView} onClick={() => setQrCodeView("#contact")}>
+          <button onClick={() => setQrCode(true)}>
             SCAN CODE
             <MdOutlineQrCode2 />
-          </a>
+          </button>
         </div>
       </article>
+
+      {qrCode && <QrCode closeQrCode={setQrCode} />}
     </section>
   );
 };
