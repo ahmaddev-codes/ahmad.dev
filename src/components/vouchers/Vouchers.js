@@ -20,7 +20,7 @@ const Vouchers = () => {
         modules={[Pagination]}
         spaceBetween={20}
         slidesPerView={2}
-        fade-darkEffect
+        fadeEffect
         pagination={{ clickable: true }}
         scrollbar={{ draggable: true }}
         breakpoints={{
