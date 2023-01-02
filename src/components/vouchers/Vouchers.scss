@@ -17,28 +17,15 @@
     gap: 3rem;
   }
 
-  &__header {
-    h1 {
-      font-size: 1.25rem;
-      font-weight: $semi_bold;
-      letter-spacing: -0.32px;
+  h2 {
+    font-size: 1rem;
+    font-weight: $medium;
+    letter-spacing: -0.32px;
+    color: $dark_white;
+    margin-top: -0.5rem;
 
-      @include breakpoint-up(large) {
-        font-size: 2rem;
-        line-height: 3rem;
-      }
-    }
-
-    h2 {
-      font-size: 1rem;
-      font-weight: $medium;
-      letter-spacing: -0.32px;
-      color: $dark_white;
-      margin-top: -0.5rem;
-
-      @include breakpoint-up(large) {
-        font-size: 1.475rem;
-      }
+    @include breakpoint-up(large) {
+      font-size: 1.475rem;
     }
   }
 

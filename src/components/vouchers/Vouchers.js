@@ -12,10 +12,7 @@ import "swiper/scss/pagination";
 const Vouchers = () => {
   return (
     <section id="vouchers" className="vouchers">
-      <div className="vouchers__header">
-        <h1>Vouchers</h1>
-        <h2>What people say about me</h2>
-      </div>
+      <h2>What people say about me</h2>
 
       <div className="vouchers__container">
         <Swiper
