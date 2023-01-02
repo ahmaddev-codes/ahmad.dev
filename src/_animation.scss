@@ -1,6 +1,6 @@
 @import './variables.scss';
 
-/* ===== The underline effect in link ===== */
+/* ===== underline effect in header link ===== */
 @keyframes underline {
   from {
     width: 0;
@@ -10,7 +10,7 @@
   }
 }
 
-/* ===== The greet animation ===== */
+/* ===== greet animation ===== */
 @keyframes greet {
   from {
     transform: rotate(0);
