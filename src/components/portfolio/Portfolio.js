@@ -10,7 +10,7 @@ import "swiper/scss/pagination";
 
 const Portfolio = () => {
   return (
-    <section className="portfolio">
+    <section id="portfolio" className="portfolio">
       <div className="portfolio__header">
         <h1>My Portfolio</h1>
         <h2>10+ projects in Design & Web Development</h2>
@@ -20,28 +20,28 @@ const Portfolio = () => {
         <Swiper
           // install Swiper modules
           modules={[Pagination]}
-          spaceBetween={40}
+          spaceBetween={30}
           slidesPerView={1}
           fadeEffect
           pagination={{ clickable: true }}
           scrollbar={{ draggable: true }}
           breakpoints={{
-            480: {
-              width: 400,
+            425: {
+              width: 415,
               slidesPerView: 1,
             },
-            820: {
-              width: 820,
+            768: {
+              width: 730,
               slidesPerView: 2,
             },
-            1280: {
-              width: 1280,
+            1024: {
+              width: 1000,
               slidesPerView: 3,
             },
-            1400: {
+            1440: {
               width: 1400,
-              slidesPerView: 4,
-            },
+              slidesPerView: 5,
+            }
           }}
         >
           <SwiperSlide>

@@ -1,47 +1,68 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import './Nav.scss';
-import logo from '../../logo.svg';
+import { React, useState } from "react";
+import "./Nav.scss";
+import logo from "../../logo.svg";
 
 const Nav = () => {
+  const [goTo, setGoTo] = useState("#");
   return (
-    <nav className='nav'>
-      <div className='nav__hamburger'>
+    <nav className="nav">
+      <div className="nav__hamburger">
         <span></span>
         <span></span>
         <span></span>
       </div>
 
-      <div className='nav__link'>
-        <NavLink to='/'>
-            Home
-        </NavLink>
-        <NavLink to='/portfolio'>
-            Portfolio
-        </NavLink>
-        <NavLink to='/bio'>
-            Bio
-        </NavLink>
-        <NavLink to='/arsenal'>
-            Arsenal
-        </NavLink>
+      <div className="nav__link">
+        <a
+          href={goTo}
+          onClick={() => setGoTo("#")}
+        >
+          Home
+        </a>
+        <a
+          href={goTo}
+          onClick={() => setGoTo("#portfolio")}
+        >
+          Portfolio
+        </a>
+        <a
+          href={goTo}
+          onClick={() => setGoTo("#bio")}
+        >
+          Bio
+        </a>
+        <a
+          href={goTo}
+          onClick={() => setGoTo("#arsenal")}
+        >
+          Arsenal
+        </a>
       </div>
 
-      <img className='nav__logo' src={ logo } alt='logo'></img>
+      <img className="nav__logo" src={logo} alt="logo"></img>
 
-      <div className='nav__link'>
-        <NavLink to='/skills'>
-            Skills
-        </NavLink>
-        <NavLink to='/vouchers'>
-            Vouchers
-        </NavLink>
-        <NavLink to='/contact'>
-            Contact Me
-        </NavLink>
+      <div className="nav__link">
+        <a
+          href={goTo}
+          onClick={() => setGoTo("#skills")}
+        >
+          Skills
+        </a>
+        <a
+          href={goTo}
+          onClick={() => setGoTo("#vouchers")}
+        >
+          Vouchers
+        </a>
+        <a
+          href={goTo}
+          onClick={() => setGoTo("#contact")}
+        >
+          Contact Me
+        </a>
       </div>
     </nav>
-  )
-}
+  );
+};
 
 export default Nav;

@@ -12,7 +12,7 @@ const Header = () => {
     Aos.init({})
   }, []);
   return (
-    <header className='header'>
+    <header id='#' className='header'>
       <div
         className='header__profile'
         data-aos="fade-right"
