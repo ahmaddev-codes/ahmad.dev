@@ -1,63 +1,46 @@
 import { React, useState } from "react";
 import "./Nav.scss";
 import logo from "../../logo.svg";
+import { CgMenu } from 'react-icons/cg';
 
 const Nav = () => {
   const [goTo, setGoTo] = useState("#");
+  const [hamburgerOpen, setHamburgerOpen] = useState(false);
+
   return (
     <nav className="nav">
-      <div className="nav__hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
+      <div
+        className="nav__hamburger"
+        onClick={() => setHamburgerOpen(!hamburgerOpen)}
+      >
+        <CgMenu />
       </div>
 
       <div className="nav__link">
-        <a
-          href={goTo}
-          onClick={() => setGoTo("#")}
-        >
+        <a href={goTo} onClick={() => setGoTo("#")}>
           Home
         </a>
-        <a
-          href={goTo}
-          onClick={() => setGoTo("#portfolio")}
-        >
+        <a href={goTo} onClick={() => setGoTo("#portfolio")}>
           Portfolio
         </a>
-        <a
-          href={goTo}
-          onClick={() => setGoTo("#bio")}
-        >
+        <a href={goTo} onClick={() => setGoTo("#bio")}>
           Bio
         </a>
-        <a
-          href={goTo}
-          onClick={() => setGoTo("#arsenal")}
-        >
+        <a href={goTo} onClick={() => setGoTo("#arsenal")}>
           Arsenal
         </a>
       </div>
 
-      <img className="nav__logo" src={logo} alt="logo"></img>
+      <img src={logo} alt="logo"></img>
 
       <div className="nav__link">
-        <a
-          href={goTo}
-          onClick={() => setGoTo("#skills")}
-        >
+        <a href={goTo} onClick={() => setGoTo("#skills")}>
           Skills
         </a>
-        <a
-          href={goTo}
-          onClick={() => setGoTo("#vouchers")}
-        >
+        <a href={goTo} onClick={() => setGoTo("#vouchers")}>
           Vouchers
         </a>
-        <a
-          href={goTo}
-          onClick={() => setGoTo("#contact")}
-        >
+        <a href={goTo} onClick={() => setGoTo("#contact")}>
           Contact Me
         </a>
       </div>
