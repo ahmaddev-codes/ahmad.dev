@@ -1,14 +1,23 @@
-import React from "react";
+import { React, useEffect } from "react";
 import "../portfolio/Portfolio.scss";
 import { TiArrowSortedUp } from "react-icons/ti";
 import { Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
+import Aos from "aos";
 
 // Import Swiper styles
 import "swiper/scss";
 import "swiper/scss/pagination";
 
 const Portfolio = () => {
+
+  useEffect(() => {
+    Aos.init({
+      duration: 1000,
+      easing: "ease-in-out",
+    });
+  }, []);
+
   return (
     <section id="portfolio" className="portfolio">
       <div className="portfolio__header">
@@ -16,7 +25,7 @@ const Portfolio = () => {
         <h2>10+ projects in Design & Web Development</h2>
       </div>
 
-      <div className="slider__container">
+      <div className="slider__container" data-aos="fade-up">
         <Swiper
           // install Swiper modules
           modules={[Pagination]}
@@ -41,7 +50,7 @@ const Portfolio = () => {
             1440: {
               width: 1400,
               slidesPerView: 5,
-            }
+            },
           }}
         >
           <SwiperSlide>
