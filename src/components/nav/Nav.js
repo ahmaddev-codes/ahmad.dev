@@ -1,19 +1,34 @@
 import { React, useState } from "react";
 import "./Nav.scss";
 import logo from "../../logo.svg";
-import { CgMenu } from 'react-icons/cg';
 
 const Nav = () => {
-  const [goTo, setGoTo] = useState("#");
-  const [hamburgerOpen, setHamburgerOpen] = useState(false);
+  const [goTo, setGoTo] = useState("#")
+  const [openHamburger, setOpenHamburger] = useState("nav__hamburger")
+  const [openMenu, setOpenMenu] = useState("mobileMenu")
+  const [isHamburgerOpen,setIsHamburgerOpen] = useState(false)
+
+  const updateMenu = () => {
+    if (!isHamburgerOpen) {
+      setOpenHamburger("nav__hamburger hamburgerOpen")
+      setOpenMenu("mobileMenu openMobileMenu")
+    }
+    else {
+      setOpenHamburger("nav__hamburger")
+      setOpenMenu("mobileMenu")
+    }
+
+    setIsHamburgerOpen(!isHamburgerOpen)
+  }
 
   return (
     <nav className="nav">
-      <div
-        className="nav__hamburger"
-        onClick={() => setHamburgerOpen(!hamburgerOpen)}
+      <div className={openHamburger}
+        onClick={updateMenu}
       >
-        <CgMenu />
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
 
       <div className="nav__link">
@@ -31,7 +46,7 @@ const Nav = () => {
         </a>
       </div>
 
-      <img src={logo} alt="logo"></img>
+      <img className="nav__logo" src={logo} alt="logo"></img>
 
       <div className="nav__link">
         <a href={goTo} onClick={() => setGoTo("#skills")}>
@@ -43,6 +58,34 @@ const Nav = () => {
         <a href={goTo} onClick={() => setGoTo("#contact")}>
           Contact Me
         </a>
+      </div>
+
+      <div className={openMenu}>
+        <div className="mobileMenu__container">
+          <ul>
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#portfolio">Portfolio</a>
+            </li>
+            <li>
+              <a href="#bio">Bio</a>
+            </li>
+            <li>
+              <a href="#skills">Skills</a>
+            </li>
+            <li>
+              <a href="#arsenal">Arsenal</a>
+            </li>
+            <li>
+              <a href="#vouchers">Vouchers</a>
+            </li>
+            <li>
+              <a href="#contact">Contact Me</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
   );
