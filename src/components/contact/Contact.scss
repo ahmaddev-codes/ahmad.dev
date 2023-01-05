@@ -150,6 +150,12 @@
           border: 1px solid $white;
         }
 
+        &:disabled {
+          color: $dark_grey;
+          background: transparent;
+          border: 1px solid $dark_white;
+        }
+
         @include breakpoint-up(large) {
           height: 4rem;
         }
