@@ -1,20 +1,18 @@
-import { React, useState, useEffect } from "react";
+import { React, useRef, useEffect } from "react";
+import emailjs from '@emailjs/browser';
 import "../contact/Contact.scss";
 import contactProfile from "../../images/bitmoji-5.png";
 import Aos from 'aos';
 
 const Contact = () => {
 
-  const [name, setName] = useState("")
-  const [email, setEmail] = useState("")
-  const [textArea, setTextArea] = useState("")
+  const form = useRef();
 
-  const handleSubmit = (e) => {
-    alert('Form Submitted')
+  const sendEmail = (e) => {
+    alert("Your mail was successfully sent");
     e.preventDefault();
-    setName(" ");
-    setEmail(" ");
-    setTextArea(" ");
+    emailjs.sendForm('ahmad.dev', 'template_4o0m3kr', form.current, 'fVrI6IsoPEo41b4re');
+    e.target.reset();
   }
 
   useEffect(() => {
@@ -39,29 +37,31 @@ const Contact = () => {
           data-aos-once="true"
         ></img>
 
-        <form onSubmit={handleSubmit}>
+        <form ref={form} onSubmit={sendEmail}>
           <input
+            name="name"
             type="text"
-            value={name}
-            onChange={e => setName(e.target.value)}
-            placeholder="Your Name"
+            placeholder="Your Name *"
+            required
           ></input>
           <input
+            name="email"
             type="email"
-            value={email}
-            onChange={e => setEmail(e.target.value)}
-            placeholder="Your Email"
+            placeholder="Your Email *"
             required
           ></input>
           <textarea
+            name="message"
             cols="33"
             rows="6"
-            placeholder="Your message here"
+            placeholder="Your message here *"
             textarea="true"
-            value={textArea}
-            onChange={e => setTextArea(e.target.value)}
+            required
           ></textarea>
-          <button disabled={!name} className="submit__button" type="submit">
+          <button
+            className="submit__button"
+            type="submit"
+          >
             Submit
           </button>
         </form>
