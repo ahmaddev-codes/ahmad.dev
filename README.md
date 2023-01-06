@@ -16,4 +16,4 @@ In the project directory:
 
 ## Continuous integration
 
-I intend to continue working on my portfolio and stating clearly the tools I used in creating different functions
+I intend to continue working on my portfolio and stating clearly the tools I used in creating different functions and components
