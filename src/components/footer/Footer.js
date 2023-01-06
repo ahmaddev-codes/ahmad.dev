@@ -38,7 +38,8 @@ const Footer = () => {
 
       <a
         className="footer__stt"
-        href="#"
+        href="/#"
+        rel="noreferrer"
       >
         <img src={scrollToTop} alt="scroll to top"></img>
         <GiSupersonicArrow />
