@@ -25,7 +25,11 @@ const Portfolio = () => {
         <h2>10+ projects in Design & Web Development</h2>
       </div>
 
-      <div className="slider__container" data-aos="fade-up">
+      <div
+        className="slider__container"
+        data-aos="fade-up"
+        data-aos-onc="true"
+      >
         <Swiper
           // install Swiper modules
           modules={[Pagination]}
