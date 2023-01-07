@@ -28,7 +28,7 @@ const Portfolio = () => {
       <div
         className="slider__container"
         data-aos="fade-up"
-        data-aos-onc="true"
+        data-aos-once="true"
       >
         <Swiper
           // install Swiper modules

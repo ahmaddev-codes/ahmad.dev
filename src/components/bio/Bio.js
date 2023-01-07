@@ -108,14 +108,14 @@ const Bio = () => {
 
         <ul>
           <li
-            data-aos="fade-left"
+            data-aos="fade-up"
           >
             <span className="fade">Tijani Ahmad</span> is a Front End Web
             Developer with 1+ years of experience in developing for the Web
             using the core front-end technologies - HTML, CSS and JavaScript.
           </li>
           <li
-            data-aos="fade-left"
+            data-aos="fade-up"
           >
             He has knowledge in using the libraries and frameworks of the above
             mentioned front-end technologies, which includes but not limited to{" "}
@@ -123,7 +123,7 @@ const Bio = () => {
             <span className="fade">React.Js</span>.
           </li>
           <li
-            data-aos="fade-left"
+            data-aos="fade-up"
           >
             Collaborating with team members using Version Control Systems (VCS)
             like <span className="fade">Git</span> and{" "}
@@ -132,7 +132,7 @@ const Bio = () => {
             debugging.
           </li>
           <li
-            data-aos="fade-left"
+            data-aos="fade-up"
           >
             Tijani Ahmad is also proficient in using industry standard design
             principles in creating user centered UI with 2+ years of experience
@@ -140,7 +140,7 @@ const Bio = () => {
             <span className="fade">experience design</span>.
           </li>
           <li
-            data-aos="fade-left"
+            data-aos="fade-up"
           >
             Designing for <span className="fade">Accessibility</span> and{" "}
             <span className="fade">Inclusivity</span> to ensure all users’ needs
