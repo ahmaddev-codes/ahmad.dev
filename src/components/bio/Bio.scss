@@ -189,17 +189,17 @@
 
       li {
         list-style-type: disc;
-        font-size: 0.875rem;
+        font-size: 1rem;
         font-weight: 500;
-        line-height: 1.35rem;
+        line-height: 1.5rem;
 
         &:not(last-child) {
           margin-bottom: 0.8rem;
         }
 
         @include breakpoint-up(large) {
-          font-size: 1rem;
-          line-height: 1.5rem;
+          font-size: 1.2rem;
+          line-height: 2rem;
         }
       }
     }
@@ -297,6 +297,7 @@
 
 .fade {
   color: $dark_grey;
+  font-weight: 600;
 }
 
 .small {
