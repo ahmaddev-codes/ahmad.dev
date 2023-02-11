@@ -63,7 +63,7 @@ const Nav = () => {
       <div className={openMenu}>
         <div className="mobileMenu__container">
           <ul>
-            <li>
+            <li onClick={openMenu}>
               <a href="/#">Home</a>
             </li>
             <li>
