@@ -110,15 +110,15 @@ const Bio = () => {
           <li
             data-aos="fade-up"
           >
-            <span className="fade">Tijani Ahmad</span> is a Front End Web
-            Developer with 1+ years of experience in developing for the Web
-            using the core front-end technologies - HTML, CSS and JavaScript.
+            I am a Software Engineer with knowledge in using the core technologies
+            of the web - <span className="fade">HTML, CSS and JavaScript</span> - in
+            building maintable, scalable and accessible websites.
           </li>
           <li
             data-aos="fade-up"
           >
-            He has knowledge in using the libraries and frameworks of the above
-            mentioned front-end technologies, which includes but not limited to{" "}
+            Using CSS libraries and JavaScript frameworks in building functional websites,
+            which includes but is not limited to using tools like{" "}
             <span className="fade">Tailwind CSS</span> and{" "}
             <span className="fade">React.Js</span>.
           </li>
@@ -134,8 +134,8 @@ const Bio = () => {
           <li
             data-aos="fade-up"
           >
-            Tijani Ahmad is also proficient in using industry standard design
-            principles in creating user centered UI with 2+ years of experience
+            Proficiency in using industry standard design
+            principles in creating user front and centered UI with 2+ years of experience
             in <span className="fade">User Interface</span> and{" "}
             <span className="fade">experience design</span>.
           </li>
