@@ -51,9 +51,9 @@ const Skills = () => {
       id: 5,
       title: "Responsive Website",
       image: skillImage5,
-      info: `Adding media queries for responsive adaptable on different devices
-      for better user experience, using the mobile first approach to
-      ensure that nothing breaks.`,
+      info: `Adding media queries for responsiveness - adaptable - on different devices
+      for better user experience, using the mobile first approach for inclusivity and to
+      ensure nothing breaks.`,
     },
   ];
 
