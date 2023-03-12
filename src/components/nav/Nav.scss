@@ -33,7 +33,7 @@
       height: 0.065rem;
       border-radius: 1.25rem;
       background-color: $white;
-      transform-origin: 2px 2px;
+      transform-origin: 1.5px 2px;
 
       &:first-child {
         margin-bottom: 0.4rem;
@@ -151,7 +151,7 @@
 /* hamburger open style */
 .hamburgerOpen {
   span:nth-child(1) {
-    transform: rotate(45deg);
+    transform: rotate(46deg);
     transition: 300ms ease-in-out;
   }
 
