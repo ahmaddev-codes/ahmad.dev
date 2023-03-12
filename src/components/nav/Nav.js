@@ -6,7 +6,8 @@ const Nav = () => {
   const [goTo, setGoTo] = useState("#")
   const [openHamburger, setOpenHamburger] = useState("nav__hamburger")
   const [openMenu, setOpenMenu] = useState("mobileMenu")
-  const [isHamburgerOpen,setIsHamburgerOpen] = useState(false)
+  const [isHamburgerOpen, setIsHamburgerOpen] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false)
 
   const updateMenu = () => {
     if (!isHamburgerOpen) {
@@ -19,6 +20,19 @@ const Nav = () => {
     }
 
     setIsHamburgerOpen(!isHamburgerOpen)
+  }
+
+  const updateMenuClick = () => {
+    if (!menuOpen) {
+      setOpenMenu("mobileMenu")
+      setOpenHamburger("nav__hamburger")
+    }
+    else {
+      setOpenMenu("mobileMenu openMobileMenu")
+      setOpenHamburger("nav__hamburger hamburgerOpen")
+    }
+
+    setMenuOpen(!menuOpen)
   }
 
   return (
@@ -60,10 +74,13 @@ const Nav = () => {
         </a>
       </div>
 
-      <div className={openMenu}>
+      <div
+        className={openMenu}
+        onClick={updateMenuClick}
+      >
         <div className="mobileMenu__container">
           <ul>
-            <li onClick={openMenu}>
+            <li>
               <a href="/#">Home</a>
             </li>
             <li>
