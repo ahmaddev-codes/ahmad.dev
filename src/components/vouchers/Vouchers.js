@@ -19,7 +19,7 @@ const Vouchers = () => {
         // install Swiper modules
         modules={[Pagination]}
         spaceBetween={20}
-        slidesPerView={2}
+        slidesPerView={1}
         fadeEffect
         pagination={{ clickable: true }}
         scrollbar={{ draggable: true }}
@@ -30,7 +30,7 @@ const Vouchers = () => {
           },
           768: {
             width: 730,
-            slidesPerView: 1,
+            slidesPerView: 2,
           },
           1024: {
             width: 1000,
