@@ -295,6 +295,12 @@
         border-radius: 10rem;
         width: 2rem;
         height: 2rem;
+        overflow: hidden;
+
+        img {
+          height: 50%;
+          width: 50%;
+        }
 
         @include breakpoint-up(large) {
           transform: scale(1.4);
