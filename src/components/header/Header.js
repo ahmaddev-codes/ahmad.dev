@@ -3,7 +3,7 @@ import "./Header.scss";
 import "aos/dist/aos.css";
 import profile from "../../images/bitmoji-1.png";
 import greeting from "../../images/bitmoji-2.png";
-import fire from "../../icons/fire.svg";
+import fire from "../../images/firegif.gif";
 import Aos from "aos";
 
 const Header = () => {
