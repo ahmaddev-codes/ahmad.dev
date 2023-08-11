@@ -1,6 +1,6 @@
-@import '../../variables';
-@import '../../mixins';
-@import '../../animation';
+@import "../../variables";
+@import "../../mixins";
+@import "../../animation";
 
 .header {
   position: relative;
@@ -13,33 +13,19 @@
 
   &::before {
     position: absolute;
-    content: '';
+    content: "";
     top: 0;
     width: 100%;
     height: 100%;
     opacity: 0.4;
-    background-image:
-      url('../../icons/git-bg.png'),
-      url('../../icons/github-bg.png'),
-      url('../../icons/js-bg.png'),
-      url('../../icons/html-bg.png'),
-      url('../../icons/sass-bg.png'),
-      url('../../icons/react-bg.png');
+    background-image: url("../../icons/git-bg.png"),
+      url("../../icons/github-bg.png"), url("../../icons/js-bg.png"),
+      url("../../icons/html-bg.png"), url("../../icons/sass-bg.png"),
+      url("../../icons/react-bg.png");
     background-repeat: no-repeat;
-    background-size:
-      2rem auto,
-      2rem auto,
-      2rem auto,
-      2rem auto,
-      2rem auto,
+    background-size: 2rem auto, 2rem auto, 2rem auto, 2rem auto, 2rem auto,
       2rem auto;
-    background-position:
-      10% 50%,
-      20% 20%,
-      80% 95%,
-      85% 70%,
-      60% 50%,
-      20% 90%;
+    background-position: 10% 50%, 20% 20%, 80% 95%, 85% 70%, 60% 50%, 20% 90%;
     animation: float 10s ease infinite;
     z-index: -1;
   }
@@ -217,7 +203,7 @@
       &::before,
       &::after {
         position: absolute;
-        content: '';
+        content: "";
         left: 50%;
         transform: translateX(-50%);
         width: 150%;
@@ -228,8 +214,7 @@
 
       &::before {
         top: -70%;
-        background-image:
-          radial-gradient(circle, $white 20%, transparent 20%),
+        background-image: radial-gradient(circle, $white 20%, transparent 20%),
           radial-gradient(circle, transparent 20%, $white 20%, transparent 30%),
           radial-gradient(circle, $white 20%, transparent 20%),
           radial-gradient(circle, transparent 10%, $white 15%, transparent 20%),
@@ -237,52 +222,25 @@
           radial-gradient(circle, $white 20%, transparent 20%),
           radial-gradient(circle, $white 20%, transparent 20%),
           radial-gradient(circle, $white 20%, transparent 20%);
-        background-size:
-          10% 10%,
-          20% 20%,
-          15% 15%,
-          20% 20%,
-          18% 18%,
-          10% 10%,
-          15% 15%,
-          18% 18%;
-        background-position:
-          5% 90%,
-          10% 90%,
-          15% 90%,
-          25% 90%,
-          25% 90%,
-          40% 90%,
-          55% 90%,
-          70% 90%;
+        background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%,
+          15% 15%, 18% 18%;
+        background-position: 5% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%,
+          55% 90%, 70% 90%;
         animation: topBubbles 1s ease-in-out infinite;
       }
 
       &::after {
         bottom: -70%;
-        background-image:
-          radial-gradient(circle, $white 20%, transparent 20%),
+        background-image: radial-gradient(circle, $white 20%, transparent 20%),
           radial-gradient(circle, transparent 10%, $white 15%, transparent 20%),
           radial-gradient(circle, $white 20%, transparent 20%),
           radial-gradient(circle, transparent 10%, $white 15%, transparent 20%),
           radial-gradient(circle, $white 20%, transparent 20%),
           radial-gradient(circle, $white 20%, transparent 20%),
           radial-gradient(circle, $white 20%, transparent 20%);
-        background-size:
-          15% 15%,
-          20% 20%,
-          18% 18%,
-          20% 20%,
-          15% 15%,
-          20% 20%,
+        background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%,
           18% 18%;
-        background-position:
-          10% 0%,
-          30% 10%,
-          55% 0%,
-          70% 0%,
-          85% 0%,
-          70% 0%,
+        background-position: 10% 0%, 30% 10%, 55% 0%, 70% 0%, 85% 0%, 70% 0%,
           70% 0%;
         animation: bottomBubbles 1s ease-in-out infinite;
       }
