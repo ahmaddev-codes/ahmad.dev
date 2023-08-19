@@ -8,6 +8,9 @@ import footerImage from "../../images/bitmoji-8.png";
 import scrollToTop from "../../icons/scroll-to-top.svg";
 
 const Footer = () => {
+  const copyright = new Date().getFullYear();
+  copyright.toLocaleString();
+
   return (
     <footer className="footer">
       <div className="footer__social">
@@ -50,7 +53,7 @@ const Footer = () => {
         <div className="quote">Au revoir!</div>
       </div>
 
-      <p>Copyright © Tijani Ahmad, 2022.</p>
+      <p>Copyright © Tijani Ahmad, {copyright}.</p>
     </footer>
   );
 };
