@@ -63,10 +63,13 @@
       background: $chat_color;
       margin-left: -5rem;
       border-radius: 3.5rem 3.5rem 3.5rem 0.375rem;
+
+      -webkit-backdrop-filter: blur(3px);
       backdrop-filter: blur(3px);
       transform: rotate(0);
       opacity: 0;
       animation: greet 5s ease infinite;
+      -webkit-user-select: none;
       user-select: none;
 
       @include breakpoint-up(large) {
@@ -132,6 +135,7 @@
     .greeting {
       display: flex;
       align-items: center;
+      -webkit-user-select: none;
       user-select: none;
 
       @include breakpoint-up(large) {
@@ -180,6 +184,7 @@
       align-items: center;
       justify-content: center;
       border-radius: 3.5rem;
+      -webkit-backdrop-filter: blur(3px);
       backdrop-filter: blur(3px);
       background: $chat_color;
       padding: 0 0.5rem;
