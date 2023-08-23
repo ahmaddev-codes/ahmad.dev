@@ -46,14 +46,20 @@
   }
 
   &__logo {
-      margin-left: 40%;
+    margin-left: 40%;
+
+    @include breakpoint-up(large) {
+      margin-left: 0;
+    }
+
+    img {
       width: 1.5rem;
       height: auto;
 
       @include breakpoint-up(large) {
         width: 2rem;
-        margin-left: 0;
       }
+    }
   }
 
   &__link {

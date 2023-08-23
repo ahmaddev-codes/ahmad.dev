@@ -60,7 +60,9 @@ const Nav = () => {
         </a>
       </div>
 
-      <img className="nav__logo" src={logo} alt="logo"></img>
+      <a className="nav__logo" href="/#">
+        <img src={logo} alt="logo"></img>
+      </a>
 
       <div className="nav__link">
         <a href={goTo} onClick={() => setGoTo("#skills")}>
