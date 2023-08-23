@@ -126,13 +126,19 @@
 }
 .nav__logo {
   margin-left: 40%;
+}
+@media (min-width: 64em) {
+  .nav__logo {
+    margin-left: 0;
+  }
+}
+.nav__logo img {
   width: 1.5rem;
   height: auto;
 }
 @media (min-width: 64em) {
-  .nav__logo {
+  .nav__logo img {
     width: 2rem;
-    margin-left: 0;
   }
 }
 .nav__link {
