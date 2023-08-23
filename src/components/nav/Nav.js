@@ -3,43 +3,43 @@ import "./Nav.scss";
 import logo from "../../logo.svg";
 
 const Nav = () => {
-  const [goTo, setGoTo] = useState("#")
-  const [openHamburger, setOpenHamburger] = useState("nav__hamburger")
-  const [openMenu, setOpenMenu] = useState("mobileMenu")
-  const [isHamburgerOpen, setIsHamburgerOpen] = useState(false)
-  const [menuOpen, setMenuOpen] = useState(false)
+  const [goTo, setGoTo] = useState("#");
+  const [openHamburger, setOpenHamburger] = useState("nav__hamburger");
+  const [openMenu, setOpenMenu] = useState("mobileMenu");
+  const [isHamburgerOpen, setIsHamburgerOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const linkClick = () => {
+    setOpenMenu("mobileMenu");
+  };
 
   const updateMenu = () => {
     if (!isHamburgerOpen) {
-      setOpenHamburger("nav__hamburger hamburgerOpen")
-      setOpenMenu("mobileMenu openMobileMenu")
-    }
-    else {
-      setOpenHamburger("nav__hamburger")
-      setOpenMenu("mobileMenu")
+      setOpenHamburger("nav__hamburger hamburgerOpen");
+      setOpenMenu("mobileMenu openMobileMenu");
+    } else {
+      setOpenHamburger("nav__hamburger");
+      setOpenMenu("mobileMenu");
     }
 
-    setIsHamburgerOpen(!isHamburgerOpen)
-  }
+    setIsHamburgerOpen(!isHamburgerOpen);
+  };
 
   const updateMenuClick = () => {
     if (!menuOpen) {
-      setOpenMenu("mobileMenu")
-      setOpenHamburger("nav__hamburger")
-    }
-    else {
-      setOpenMenu("mobileMenu openMobileMenu")
-      setOpenHamburger("nav__hamburger hamburgerOpen")
+      setOpenMenu("mobileMenu");
+      setOpenHamburger("nav__hamburger");
+    } else {
+      setOpenMenu("mobileMenu openMobileMenu");
+      setOpenHamburger("nav__hamburger hamburgerOpen");
     }
 
-    setMenuOpen(!menuOpen)
-  }
+    setMenuOpen(!menuOpen);
+  };
 
   return (
     <nav className="nav">
-      <div className={openHamburger}
-        onClick={updateMenu}
-      >
+      <div className={openHamburger} onClick={updateMenu}>
         <span></span>
         <span></span>
         <span></span>
@@ -60,7 +60,9 @@ const Nav = () => {
         </a>
       </div>
 
-      <img className="nav__logo" src={logo} alt="logo"></img>
+      <a className="nav__logo" href="/#">
+        <img src={logo} alt="logo"></img>
+      </a>
 
       <div className="nav__link">
         <a href={goTo} onClick={() => setGoTo("#skills")}>
@@ -74,12 +76,9 @@ const Nav = () => {
         </a>
       </div>
 
-      <div
-        className={openMenu}
-        onClick={updateMenuClick}
-      >
+      <div className={openMenu} onClick={updateMenuClick}>
         <div className="mobileMenu__container">
-          <ul>
+          <ul onClick={linkClick}>
             <li>
               <a href="/#">Home</a>
             </li>
